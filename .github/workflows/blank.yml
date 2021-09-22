@@ -13,7 +13,6 @@ jobs:
 
     steps:
       - name: Send Slack Message
-        uses: muinmomin/webhook-action@v1.0.0
-        with:
-          url: ${{ env.RESPONSE_URL }}
-          data: '{ "response_type": "in_channel", "text": "Hello <@${{ env.USER_NAME }}> from the running GitHub Actions Workflow." }'
+        run: |
+          echo 'Hello world'
+          echo {{ env.USER_NAME }}
