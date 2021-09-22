@@ -15,4 +15,4 @@ jobs:
       - name: Send Slack Message
         run: |
           echo 'Hello world'
-          echo '{{ env.USER_NAME }}'
+          echo '${{ env.USER_NAME }}'
